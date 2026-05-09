@@ -1,29 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Lab1 实验总结</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1 工程化改造与单元测试 | 陈月然</title>
     <style>
-        body{font-family:Microsoft YaHei;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.7}
-        h1{color:#2c3e50}
-        a{color:#0066cc}
+        body{font-family:Microsoft YaHei,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.8;background:#f7f7f7;color:#333;}
+        h1{color:#1e40af;text-align:center;border-bottom:2px solid #ddd;padding-bottom:10px;}
+        h2{color:#2563eb;margin-top:30px;font-size:20px;}
+        a{color:#2563eb;text-decoration:none;font-weight:bold;}
+        a:hover{text-decoration:underline;}
+        .card{background:white;padding:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin:20px 0;}
+        ul{padding-left:22px;}
+        li{margin:8px 0;}
+        .back{margin-bottom:20px;}
     </style>
 </head>
 <body>
+    <div class="back">
+        <a href="index.html">← 返回主页</a>
+    </div>
+
     <h1>Lab1 工程化改造与单元测试</h1>
-    <a href="index.html">← 返回主页</a>
 
-    <h2>一、实验内容</h2>
-    <p>完成 FastAPI 环境搭建，解决依赖冲突，将项目迁移到 Poetry，修复 MySQL、MinIO 硬编码问题，编写单元测试挖掘代码缺陷。</p>
+    <div class="card">
+        <h2>一、实验目标</h2>
+        <ul>
+            <li>完成 FastAPI 项目环境搭建、本地运行与接口调试</li>
+            <li>解决项目依赖冲突问题，从 requirements 迁移至 Poetry</li>
+            <li>修复数据库、MinIO 硬编码配置，实现 .env 标准化读取</li>
+            <li>编写单元测试，建立代码质量保障体系</li>
+            <li>完成 Git 托管，实现无警告、无报错干净启动</li>
+        </ul>
+    </div>
 
-    <h2>二、遇到的问题</h2>
-    <ul>
-        <li>依赖版本冲突严重</li>
-        <li>配置硬编码导致服务无法启动</li>
-        <li>密码长度超出 bcrypt 限制</li>
-    </ul>
+    <div class="card">
+        <h2>二、实验内容</h2>
+        <ul>
+            <li>使用 Conda 创建隔离虚拟环境，避免依赖污染</li>
+            <li>解决 Pillow、mineru 等依赖版本冲突</li>
+            <li>完成项目现代化改造，迁移至 Poetry 依赖管理</li>
+            <li>修复 MySQL、MinIO 硬编码缺陷，统一读取环境变量</li>
+            <li>编写 18 项单元测试，覆盖配置模块、安全模块</li>
+        </ul>
+    </div>
 
-    <h2>三、经验教训</h2>
-    <p>现代项目必须使用标准化环境变量、Poetry 依赖管理，单元测试能提前发现大量隐藏缺陷。</p>
+    <div class="card">
+        <h2>三、遇到的问题</h2>
+        <ul>
+            <li>依赖版本冲突严重，项目无法启动</li>
+            <li>数据库、文件存储配置硬编码，连接失败</li>
+            <li>密码字段超长导致 bcrypt 加密报错</li>
+            <li>配置模块存在全局变量风险，环境变量不生效</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>四、解决方案</h2>
+        <ul>
+            <li>使用清华镜像加速，锁定兼容依赖版本</li>
+            <li>删除所有硬编码，改用 .env 标准化配置</li>
+            <li>规范密码长度，适配加密算法</li>
+            <li>修复配置模块逻辑，支持环境变量高优先级覆盖</li>
+            <li>通过单元测试提前发现安全隐患与架构缺陷</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>五、实验收获与经验教训</h2>
+        <ul>
+            <li>现代 Python 项目必须使用标准化虚拟环境与依赖管理</li>
+            <li>硬编码是工程化大忌，会导致部署困难、安全性差、不可移植</li>
+            <li>单元测试不仅验证功能，更能挖掘深层代码缺陷</li>
+            <li>工程化规范是项目长期可维护、可扩展的基础</li>
+        </ul>
+    </div>
 </body>
 </html>
