@@ -1,29 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Lab3 实验总结</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3 代码重构与可维护性 | 陈月然</title>
     <style>
-        body{font-family:Microsoft YaHei;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.7}
-        h1{color:#2c3e50}
-        a{color:#0066cc}
+        body{font-family:Microsoft YaHei,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.8;background:#f7f7f7;color:#333;}
+        h1{color:#1e40af;text-align:center;border-bottom:2px solid #ddd;padding-bottom:10px;}
+        h2{color:#2563eb;margin-top:30px;font-size:20px;}
+        a{color:#2563eb;text-decoration:none;font-weight:bold;}
+        a:hover{text-decoration:underline;}
+        .card{background:white;padding:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin:20px 0;}
+        ul{padding-left:22px;}
+        li{margin:8px 0;}
+        .back{margin-bottom:20px;}
     </style>
 </head>
 <body>
-    <h1>Lab3 代码重构与可维护性</h1>
-    <a href="index.html">← 返回主页</a>
+    <div class="back">
+        <a href="index.html">← 返回主页</a>
+    </div>
 
-    <h2>一、实验内容</h2>
-    <p>识别代码坏味道，度量圈复杂度，拆分上帝函数，使用策略模式消除 if-else，实现架构分层与服务下沉。</p>
+    <h1>Lab3 代码重构与可维护性优化</h1>
 
-    <h2>二、遇到的问题</h2>
-    <ul>
-        <li>函数职责过多，难以维护</li>
-        <li>大量 if-else 导致扩展性差</li>
-        <li>业务逻辑与控制器耦合</li>
-    </ul>
+    <div class="card">
+        <h2>一、实验目标</h2>
+        <ul>
+            <li>识别代码坏味道，量化圈复杂度</li>
+            <li>拆分上帝函数，实现职责分离与服务下沉</li>
+            <li>使用策略模式消除冗余 if-else 分支</li>
+            <li>在不改变业务行为的前提下完成架构升级</li>
+            <li>提升代码可维护性、可测试性、可扩展性</li>
+        </ul>
+    </div>
 
-    <h2>三、经验教训</h2>
-    <p>单一职责、关注点分离、策略模式能大幅提升可维护性，增量重构保证功能不变的前提下优化架构。</p>
+    <div class="card">
+        <h2>二、实验内容</h2>
+        <ul>
+            <li>使用 radon 度量代码圈复杂度，定位高风险函数</li>
+            <li>拆分臃肿路由函数，将业务逻辑下沉到服务层</li>
+            <li>抽象文件处理、搜索、知识库、图谱四大服务</li>
+            <li>设计策略模式统一信息增强通道调度</li>
+            <li>完成增量重构，保证重构前后功能一致</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>三、遇到的问题</h2>
+        <ul>
+            <li>单个函数承担过多职责，可读性极差</li>
+            <li>大量 if-else 导致扩展困难、维护成本高</li>
+            <li>控制器与业务逻辑高度耦合，无法复用</li>
+            <li>代码冗余、废弃文件多，坏味道明显</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>四、解决方案</h2>
+        <ul>
+            <li>按单一职责原则拆分服务，实现架构分层</li>
+            <li>抽象策略接口，动态加载激活策略</li>
+            <li>路由层仅做流程编排，业务逻辑完全下沉</li>
+            <li>小步增量重构，边改边测，保证功能稳定</li>
+            <li>清理无效代码，规范项目结构</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>五、实验收获与经验教训</h2>
+        <ul>
+            <li>高内聚、低耦合是优秀架构的核心标准</li>
+            <li>策略模式能显著提升扩展性，消除冗余分支</li>
+            <li>重构必须保证行为不变，以测试作为保障</li>
+            <li>长期项目必须持续治理坏味道，才能保持可维护性</li>
+        </ul>
+    </div>
 </body>
 </html>
