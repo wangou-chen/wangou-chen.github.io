@@ -1,1 +1,11 @@
-# chenyueran.github.io
+# 个人课程博客
+欢迎来到我的软件构造课程个人博客。
+
+本博客用于记录课后思考、实验过程总结与问题经验教训，包含三次实验完整心得：
+
+## 实验文章列表
+- [实验一：工程化改造与单元测试](./lab1-report.md)
+- [实验二：ADT与OOP面向对象设计](./lab2-report.md)
+- [实验三：代码重构与可维护性设计](./lab3-report.md)
+
+博客地址：https://wangou-chen.github.io
