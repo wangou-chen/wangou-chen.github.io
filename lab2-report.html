@@ -1,29 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Lab2 实验总结</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2 ADT 与 OOP 设计 | 陈月然</title>
     <style>
-        body{font-family:Microsoft YaHei;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.7}
-        h1{color:#2c3e50}
-        a{color:#0066cc}
+        body{font-family:Microsoft YaHei,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.8;background:#f7f7f7;color:#333;}
+        h1{color:#1e40af;text-align:center;border-bottom:2px solid #ddd;padding-bottom:10px;}
+        h2{color:#2563eb;margin-top:30px;font-size:20px;}
+        a{color:#2563eb;text-decoration:none;font-weight:bold;}
+        a:hover{text-decoration:underline;}
+        .card{background:white;padding:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin:20px 0;}
+        ul{padding-left:22px;}
+        li{margin:8px 0;}
+        .back{margin-bottom:20px;}
     </style>
 </head>
 <body>
-    <h1>Lab2 ADT 与 OOP 设计</h1>
-    <a href="index.html">← 返回主页</a>
+    <div class="back">
+        <a href="index.html">← 返回主页</a>
+    </div>
 
-    <h2>一、实验内容</h2>
-    <p>实现模型提供商扩展，设计 SessionContext ADT，定义 AF、RI，实现防御性拷贝与 checkRep 检查。</p>
+    <h1>Lab2 ADT 抽象数据类型与 OOP 设计</h1>
 
-    <h2>二、遇到的问题</h2>
-    <ul>
-        <li>裸 list/dict 易被篡改</li>
-        <li>不理解 AF、RI 作用</li>
-        <li>直接返回内部引用导致安全问题</li>
-    </ul>
+    <div class="card">
+        <h2>一、实验目标</h2>
+        <ul>
+            <li>理解面向接口编程，完成模型提供商扩展</li>
+            <li>掌握 ADT 抽象数据类型设计思想</li>
+            <li>实现 AF 抽象函数、RI 表示不变量、防御性编程</li>
+            <li>替换裸露 list/dict，使用强封装 ADT 管理上下文</li>
+            <li>编写破坏性测试，验证 ADT 安全性</li>
+        </ul>
+    </div>
 
-    <h2>三、经验教训</h2>
-    <p>ADT 强封装能保证数据安全，防御性编程、不变量检查是高质量代码的关键。</p>
+    <div class="card">
+        <h2>二、实验内容</h2>
+        <ul>
+            <li>基于抽象基类实现 DeepSeek 模型提供商扩展</li>
+            <li>设计 SessionContext ADT，封装对话上下文</li>
+            <li>定义 AF、RI，实现 _check_rep() 不变量检查</li>
+            <li>使用深拷贝实现防御性编程，防止外部篡改</li>
+            <li>将 ADT 接入真实聊天流程，替代裸露数据结构</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>三、遇到的问题</h2>
+        <ul>
+            <li>项目大量使用裸列表、字典，极易被非法修改</li>
+            <li>不理解 AF、RI 的作用与设计意义</li>
+            <li>直接返回内部引用，导致对象状态被破坏</li>
+            <li>扩展功能时容易侵入原有代码，违反开闭原则</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>四、解决方案</h2>
+        <ul>
+            <li>使用 ADT 封装数据，只暴露有限接口</li>
+            <li>每次修改后自动检查 RI，保证数据合法性</li>
+            <li>所有读写操作使用深拷贝，隔离外部引用</li>
+            <li>基于多态与抽象契约实现可插拔扩展</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>五、实验收获与经验教训</h2>
+        <ul>
+            <li>ADT 强封装能大幅提升代码安全性、可维护性</li>
+            <li>RI 与 AF 是判断类设计是否规范的核心工具</li>
+            <li>防御性编程是构建高可靠系统的必备技能</li>
+            <li>好的设计应遵循开闭原则，对扩展开放、对修改关闭</li>
+        </ul>
+    </div>
 </body>
 </html>
