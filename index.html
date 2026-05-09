@@ -2,66 +2,130 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陈月然 - 软件构造个人博客</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: "Microsoft YaHei", sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            background-color: #f7f7f7;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 25px;
+            line-height: 1.8;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
         h1 {
-            color: #2c3e50;
-            text-align: center;
+            color: #1f2937;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .info {
+            color: #666;
+            font-size: 16px;
         }
         .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 28px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin: 10px 0;
         }
         a {
-            color: #0066cc;
+            color: #2563eb;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 17px;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
         }
-        .info {
-            color: #666;
+        .intro-text {
+            margin: 12px 0;
+            color: #555;
+        }
+        footer {
             text-align: center;
+            margin-top: 50px;
+            color: #888;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>软件构造 - 个人实验博客</h1>
-    <p class="info">
-        姓名：陈月然 &nbsp;&nbsp; 学号：2023112638<br>
-        记录实验思考、问题总结与经验教训
-    </p>
+    <header>
+        <h1>软件构造 个人课程博客</h1>
+        <p class="info">
+            姓名：陈月然 &nbsp;&nbsp; 
+            学号：2023112638 &nbsp;&nbsp;
+            学校：哈尔滨工业大学
+        </p>
+        <p class="intro-text">
+            用于记录课程课后思考、实验过程总结、问题复盘与学习经验教训，以公开博客形式分享学习收获。
+        </p>
+    </header>
 
     <div class="card">
-        <h2>📝 实验报告列表</h2>
+        <h2>📚 实验文章入口</h2>
         <ul>
-            <li><a href="lab1-report.html">Lab1 工程化改造与单元测试</a></li>
-            <li><a href="lab2-report.html">Lab2 ADT 与 OOP 设计</a></li>
-            <li><a href="lab3-report.html">Lab3 代码重构与可维护性</a></li>
+            <li><a href="lab1-report.html">Lab1 工程化改造、依赖治理与单元测试总结</a></li>
+            <li><a href="lab2-report.html">Lab2 ADT抽象数据类型、AF/RI与OOP面向对象设计</a></li>
+            <li><a href="lab3-report.html">Lab3 代码坏味道识别、增量重构与策略模式实践</a></li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>📌 博客说明</h2>
-        <p>本博客用于发表课后阅读思考、实验进展、遇到的问题与经验教训，满足课程个人博客要求。</p>
-        <p>所有内容基于三次实验总结而成：</p>
+        <h2>🔍 博客定位与用途</h2>
+        <p>本博客严格按照课程要求搭建，基于 GitHub Pages 公开托管，主要用途包括：</p>
         <ul>
-            <li>FastAPI 项目工程化</li>
-            <li>ADT、AF、RI、面向对象设计</li>
-            <li>代码坏味道、重构、策略模式</li>
+            <li>课后阅读与课程知识点整理归纳</li>
+            <li>三次软件构造实验全过程复盘与思路总结</li>
+            <li>记录实验中遇到的故障、问题、排查过程与解决方案</li>
+            <li>沉淀面向对象、抽象数据类型、代码重构、设计模式等学习心得</li>
         </ul>
     </div>
+
+    <div class="card">
+        <h2>💡 学习内容涵盖范围</h2>
+        <ul>
+            <li>FastAPI 项目工程化、虚拟环境与 Poetry 依赖管理</li>
+            <li>配置规范化、环境变量与硬编码问题治理</li>
+            <li>ADT封装、抽象函数AF、表示不变量RI、防御性编程</li>
+            <li>开闭原则、里氏替换、多态扩展与可插拔架构设计</li>
+            <li>代码圈复杂度、坏味道识别、服务分层与增量重构</li>
+            <li>策略模式落地、消除冗余分支、提升代码可维护性</li>
+        </ul>
+    </div>
+
+    <footer>
+        GitHub Pages 个人博客 | 公开可访问 · 课程作业专用
+    </footer>
 </body>
 </html>
