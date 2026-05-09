@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 实验总结</title>
+    <style>
+        body{font-family:Microsoft YaHei;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.7}
+        h1{color:#2c3e50}
+        a{color:#0066cc}
+    </style>
+</head>
+<body>
+    <h1>Lab1 工程化改造与单元测试</h1>
+    <a href="index.html">← 返回主页</a>
+
+    <h2>一、实验内容</h2>
+    <p>完成 FastAPI 环境搭建，解决依赖冲突，将项目迁移到 Poetry，修复 MySQL、MinIO 硬编码问题，编写单元测试挖掘代码缺陷。</p>
+
+    <h2>二、遇到的问题</h2>
+    <ul>
+        <li>依赖版本冲突严重</li>
+        <li>配置硬编码导致服务无法启动</li>
+        <li>密码长度超出 bcrypt 限制</li>
+    </ul>
+
+    <h2>三、经验教训</h2>
+    <p>现代项目必须使用标准化环境变量、Poetry 依赖管理，单元测试能提前发现大量隐藏缺陷。</p>
+</body>
+</html>
